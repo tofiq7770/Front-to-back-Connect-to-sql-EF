@@ -15,7 +15,18 @@ namespace Fronttoback.Controllers
         public async Task<IActionResult> Index()
         {
             List<Slider> sliders = await _context.Sliders.ToListAsync();
+
             return View(sliders);
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Work()
+        {
+            return View();
         }
     }
 }
